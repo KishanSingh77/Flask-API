@@ -13,8 +13,8 @@ def get_large_request(rowcount):
         """The generator of mock data"""
         for _i in range(rowcount):
             time.sleep(.01)
-            txid = uuid.uuid4()
-            print(txid)
+            txid = uuid.uuid1()
+            # print(txid)
             uid = uuid.uuid4()
             amount = round(random.uniform(-1000, 1000), 2)
             yield F"('{txid}', '{uid}', {amount})\n"
